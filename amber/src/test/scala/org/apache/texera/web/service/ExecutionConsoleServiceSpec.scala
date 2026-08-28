@@ -25,9 +25,6 @@ import org.apache.texera.amber.engine.architecture.rpc.controlcommands.{
   ConsoleMessageType
 }
 import org.apache.texera.amber.engine.common.executionruntimestate.ExecutionConsoleStore
-<<<<<<< HEAD
-import org.scalatest.flatspec.AnyFlatSpec
-=======
 import org.apache.texera.web.WebsocketInput
 import org.apache.texera.web.model.websocket.event.TexeraWebSocketEvent
 import org.apache.texera.web.model.websocket.event.python.ConsoleUpdateEvent
@@ -37,18 +34,14 @@ import org.scalamock.scalatest.MockFactory
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.concurrent.Eventually.eventually
 import org.scalatest.concurrent.PatienceConfiguration.{Interval, Timeout}
-import org.scalatest.flatspec.AnyFlatSpecLike
->>>>>>> bdc6d2a90 (fix(WorkflowExecutionService): shutdown console writer thread on unsubscribe (#7914))
+import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.time.{Millis, Span}
 
 import java.time.Instant
-<<<<<<< HEAD
-=======
 import java.util.concurrent.ExecutorService
 import scala.collection.mutable.ListBuffer
 import scala.reflect.ClassTag
->>>>>>> bdc6d2a90 (fix(WorkflowExecutionService): shutdown console writer thread on unsubscribe (#7914))
 
 class ExecutionConsoleServiceSpec extends AnyFlatSpec with Matchers {
 
@@ -251,8 +244,7 @@ class ExecutionConsoleServiceSpec extends AnyFlatSpec with Matchers {
     val expectedTruncatedTitle = "a" * (messageDisplayLength - 3) + "..."
     opInfo.consoleMessages.head.title shouldBe expectedTruncatedTitle
   }
-<<<<<<< HEAD
-=======
+
   // ---------------------------------------------------------------- instance
 
   /** Empty-plan client that captures the ConsoleMessage callback the service registers. */
@@ -445,5 +437,4 @@ class ExecutionConsoleServiceSpec extends AnyFlatSpec with Matchers {
       }
     }
   }
->>>>>>> bdc6d2a90 (fix(WorkflowExecutionService): shutdown console writer thread on unsubscribe (#7914))
 }
